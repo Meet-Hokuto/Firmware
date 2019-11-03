@@ -122,7 +122,7 @@ int setpoint_term3_thread_main(int argc, char *argv[])
     //计算速度方向
 //    float32 square_vxy = 0.0;
     //一些设定值高度/vxy
-    float32 set_hight = -0.4;					//0.6      -0.4
+    float32 set_hight = -1.5;					//0.6      -0.4
 //    float32 set_vxy = 0.11;
 //    float32 set_vxy_max = 0.12;
 //    float32 set_vxy_min = 0.08;
@@ -148,7 +148,7 @@ int setpoint_term3_thread_main(int argc, char *argv[])
     float32 error_sum_max = (float)1.5 / ki;
 
     //pid x(channnel 2) 0.0386  //ge -0.058
-    float32 x_mid = -0.15;//-0.085
+    float32 x_mid =-0.2;//-0.085
     float32 x_max = x_mid + (float)0.2;//0.2
     float32 x_min = x_mid - (float)0.2;
     float32 error_last_x = 0.0;
@@ -162,7 +162,7 @@ int setpoint_term3_thread_main(int argc, char *argv[])
     float32 x_out_last = 0.0;
 
     //pid y(channnel 1) 0.108   //ge -0.076
-    float32 y_mid = 0.024;//0.103  0.11
+    float32 y_mid = 0.087;//0.103  0.11
     float32 y_max = y_mid + (float)0.2;//0.2
     float32 y_min = y_mid - (float)0.2;
     float32 error_last_y = 0.0;
